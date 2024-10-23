@@ -4,6 +4,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from sklearn.model_selection import train_test_split
 
 # Load eye features and labels
 eye_features = np.load('/Users/aaryas127/driverDrowsiness/eye_features.npy')
@@ -14,7 +15,6 @@ eye_features = eye_features / 255.0
 eye_features = eye_features.reshape(-1, 50, 100, 1)  # Ensure shape matches input to the model
 
 # Split data into training and testing sets
-from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(eye_features, labels, test_size=0.2, random_state=42)
 
 # Data augmentation
