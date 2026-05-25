@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Path to the Haar cascade file for eye detection
-cascPath = '/Users/aaryas127/driverDrowsiness/haarcascade_eye.xml'
+cascPath = cv2.data.haarcascades + 'haarcascade_eye.xml'
 eyeCascade = cv2.CascadeClassifier(cascPath)
 
 # Start video capture from the default camera
@@ -64,6 +64,6 @@ cv2.destroyAllWindows()
 eye_features = np.array(eye_features)
 
 # Save the eye features to a file (e.g., numpy .npy file)
-np.save('/Users/aaryas127/driverDrowsiness/eye_features.npy', eye_features)
+np.save('/Users/aaryas127/Documents/GitHub/driver_drowsiness/eye_features.npy', eye_features)
 
 print("Eye features saved successfully.")

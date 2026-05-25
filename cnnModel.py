@@ -4,8 +4,8 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
 # Load eye features and labels
-eye_features = np.load('/Users/aaryas127/driverDrowsiness/eye_features.npy')
-labels = np.load('/Users/aaryas127/driverDrowsiness/labels.npy')  # Assuming you have labels indicating drowsiness state
+eye_features = np.load('/Users/aaryas127/Documents/GitHub/driver_drowsiness/eye_features.npy')
+labels = np.load('/Users/aaryas127/Documents/GitHub/driver_drowsiness/labels.npy')  # Assuming you have labels indicating drowsiness state
 
 # Normalize eye features (example, adjust as needed)
 eye_features = eye_features / 255.0
@@ -41,4 +41,4 @@ loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Test accuracy: {accuracy}')
 
 # Save the model
-model.save('/Users/aaryas127/driverDrowsiness/drowsinessCnnModel.h5')
+model.save('/Users/aaryas127/Documents/GitHub/driver_drowsiness/drowsinessCnnModel.h5')

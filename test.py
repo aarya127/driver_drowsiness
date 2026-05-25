@@ -1,7 +1,7 @@
 import numpy as np
 
 # Load eye features from file
-eye_features = np.load('/Users/aaryas127/driverDrowsiness/eye_features.npy')
+eye_features = np.load('/Users/aaryas127/Documents/GitHub/driver_drowsiness/eye_features.npy')
 
 # Print shape and data type
 print("Shape of eye_features array:", eye_features.shape)

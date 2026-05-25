@@ -2,7 +2,7 @@ import cv2
 
 
 # Path to the Haar cascade file
-cascPath = '/Users/aaryas127/driverDrowsiness/haarcascade_frontalcatface.xml'
+cascPath = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 # Check if the cascade was loaded successfully
